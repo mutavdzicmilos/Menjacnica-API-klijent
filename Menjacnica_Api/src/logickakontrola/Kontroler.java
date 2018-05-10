@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import	veze.DrzaveVeza;
 import veze.OdnosVeza;
+import veze.SaveVeza;
 import veze.UrlVeza;
 public class Kontroler {
 
@@ -17,5 +18,8 @@ public class Kontroler {
 	}
 	public double returnExchangeRate(String from, String to) throws Exception{
 		return OdnosVeza.convert(from, to);
+	}
+	public void saveExchange(String from, String to, Double odnos) throws Exception {
+		SaveVeza.save(from, to,	odnos);
 	}
 }

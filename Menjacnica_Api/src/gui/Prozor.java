@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import logickakontrola.Drzava;
+import logickakontrola.Kontroler;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -176,6 +177,14 @@ public class Prozor extends JFrame {
 					} catch (Exception e) {
 						JOptionPane.showMessageDialog(null, "Konverzija nije uspela!", "Greska",
 								JOptionPane.ERROR_MESSAGE);
+					}
+					try {
+						
+						GC.kontrola.saveExchange(from, to, odnos);
+					}catch(Exception e) {
+						JOptionPane.showMessageDialog(null, "Sacuvavanje nije uspesno", "Greska",
+								JOptionPane.ERROR_MESSAGE);
+						
 					}
 					}
 				}
