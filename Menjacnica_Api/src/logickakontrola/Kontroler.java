@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import	veze.DrzaveVeza;
+import veze.OdnosVeza;
 import veze.UrlVeza;
 public class Kontroler {
 
@@ -13,5 +14,8 @@ public class Kontroler {
 	
 	public ArrayList<Drzava> getCountries(){
 		return DrzaveVeza.listOfCountries();
+	}
+	public double returnExchangeRate(String from, String to) throws Exception{
+		return OdnosVeza.convert(from, to);
 	}
 }

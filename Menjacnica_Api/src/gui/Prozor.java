@@ -161,6 +161,25 @@ public class Prozor extends JFrame {
 	private JButton getBtnKonvertuj() {
 		if (btnKonvertuj == null) {
 			btnKonvertuj = new JButton("Konvertuj");
+			btnKonvertuj.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					int fromIndex = comboBoxFrom.getSelectedIndex();
+					int toIndex = comboBoxTo.getSelectedIndex();
+					String from = drzavalista.get(fromIndex).getCurrencyId();
+					String to = drzavalista.get(toIndex).getCurrencyId();
+					double odnos = 0;
+					try {
+						odnos = GC.kontrola.returnExchangeRate(from, to);
+						double amount = Double.parseDouble(textFieldFrom.getText());
+
+						textFieldTo.setText("" + odnos * amount);
+					} catch (Exception e) {
+						JOptionPane.showMessageDialog(null, "Konverzija nije uspela!", "Greska",
+								JOptionPane.ERROR_MESSAGE);
+					}
+					}
+				}
+			);
 			btnKonvertuj.setEnabled(false);
 			btnKonvertuj.setBounds(178, 218, 89, 23);
 		}
