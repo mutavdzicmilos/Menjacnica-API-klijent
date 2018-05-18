@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import logickakontrola.Drzava;
-import logickakontrola.Kontroler;
+import logickakontrola.Menjacnica;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -55,10 +55,10 @@ public class Prozor extends JFrame {
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
-				GC.exit();
+				GuiKontroler.exit();
 			}
 		});
-		drzavalista = GC.kontrola.getCountries();
+		drzavalista = GuiKontroler.kontrola.getCountries();
 		setTitle("Menjacnica");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -168,24 +168,7 @@ public class Prozor extends JFrame {
 					int toIndex = comboBoxTo.getSelectedIndex();
 					String from = drzavalista.get(fromIndex).getCurrencyId();
 					String to = drzavalista.get(toIndex).getCurrencyId();
-					double odnos = 0;
-					try {
-						odnos = GC.kontrola.returnExchangeRate(from, to);
-						double amount = Double.parseDouble(textFieldFrom.getText());
-
-						textFieldTo.setText("" + odnos * amount);
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(null, "Konverzija nije uspela!", "Greska",
-								JOptionPane.ERROR_MESSAGE);
-					}
-					try {
-						
-						GC.kontrola.saveExchange(from, to, odnos);
-					}catch(Exception e) {
-						JOptionPane.showMessageDialog(null, "Sacuvavanje nije uspesno", "Greska",
-								JOptionPane.ERROR_MESSAGE);
-						
-					}
+					konvertuj(from, to);
 					}
 				}
 			);
@@ -193,5 +176,26 @@ public class Prozor extends JFrame {
 			btnKonvertuj.setBounds(178, 218, 89, 23);
 		}
 		return btnKonvertuj;
+	}
+
+	private void konvertuj(String from, String to) {
+		double odnos = 0;
+		try {
+			odnos = GuiKontroler.kontrola.returnExchangeRate(from, to);
+			double amount = Double.parseDouble(textFieldFrom.getText());
+
+			textFieldTo.setText("" + odnos * amount);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Konverzija nije uspela!", "Greska",
+					JOptionPane.ERROR_MESSAGE);
+		}
+		try {
+			
+			GuiKontroler.kontrola.saveExchange(from, to, odnos);
+		}catch(Exception e) {
+			JOptionPane.showMessageDialog(null, "Sacuvavanje nije uspesno", "Greska",
+					JOptionPane.ERROR_MESSAGE);
+			
+		}
 	}
 }

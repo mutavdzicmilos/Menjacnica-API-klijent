@@ -10,7 +10,7 @@ import logickakontrola.Konverzija;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-public class SaveVeza {
+public class SacuvajLogSO {
 
 	public static void save(String from, String to, Double rate) {
 		Konverzija konverzija = new Konverzija();

@@ -4,12 +4,12 @@ import java.awt.EventQueue;
 
 import javax.swing.JOptionPane;
 
-import logickakontrola.Kontroler;
+import logickakontrola.Menjacnica;
 
 
-public class GC {
+public class GuiKontroler {
 
-	public static Kontroler kontrola = new Kontroler();
+	public static Menjacnica kontrola = new Menjacnica();
 	public static Prozor prozor;
 	
 	public static void exit() {

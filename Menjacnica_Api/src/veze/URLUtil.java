@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class UrlVeza {
+public class URLUtil {
 
 	public static String getContent(String url) throws IOException {
 

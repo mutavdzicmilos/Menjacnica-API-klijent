@@ -5,7 +5,7 @@ public class Konverzija {
 	private String datumVreme;
 	private String izValute;
 	private String uValutu;
-	private Double kurs = null;
+	private double kurs = 0;
 
 	public String getDatumVreme() {
 		return datumVreme;
@@ -37,7 +37,7 @@ public class Konverzija {
 
 	public void setKurs(double kurs) {
 		if (kurs == 0)
-			this.kurs = null;
+			this.kurs = 0;
 		else
 			this.kurs = kurs;
 	}

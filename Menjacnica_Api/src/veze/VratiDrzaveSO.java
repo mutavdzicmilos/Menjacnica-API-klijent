@@ -9,7 +9,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import logickakontrola.Drzava;;
 
-public class DrzaveVeza {
+public class VratiDrzaveSO {
 
 	public static final String SERVICE = "/countries";
 	public static final String CURRENCY_LAYER_API_URL = "http://free.currencyconverterapi.com/api/v5";
@@ -19,7 +19,7 @@ public class DrzaveVeza {
 		String url = CURRENCY_LAYER_API_URL + SERVICE;
 
 		try {
-			String content = UrlVeza.getContent(url);
+			String content = URLUtil.getContent(url);
 			Gson gson = new GsonBuilder().create();
 
 			JsonObject contentJSON = gson.fromJson(content, JsonObject.class);

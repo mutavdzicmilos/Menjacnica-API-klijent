@@ -16,5 +16,53 @@
     "izValute": "AFN",
     "uValutu": "AFN",
     "kurs": 1.0
+  },
+  {
+    "datumVreme": "2018-05-18 19:36:01.361",
+    "izValute": "AFN",
+    "uValutu": "XOF",
+    "kurs": 7.820048
+  },
+  {
+    "datumVreme": "2018-05-18 19:44:24.4424",
+    "izValute": "AFN",
+    "uValutu": "BRL",
+    "kurs": 0.052567
+  },
+  {
+    "datumVreme": "2018-05-18 19:44:35.4435",
+    "izValute": "AFN",
+    "uValutu": "XCD",
+    "kurs": 0.037927
+  },
+  {
+    "datumVreme": "2018-05-18 19:44:35.4435",
+    "izValute": "AFN",
+    "uValutu": "XCD",
+    "kurs": 0.037927
+  },
+  {
+    "datumVreme": "2018-05-18 19:44:36.4436",
+    "izValute": "AFN",
+    "uValutu": "XCD",
+    "kurs": 0.037927
+  },
+  {
+    "datumVreme": "2018-05-18 19:44:43.4443",
+    "izValute": "AFN",
+    "uValutu": "AFN",
+    "kurs": 1.0
+  },
+  {
+    "datumVreme": "2018-05-18 19:45:27.4527",
+    "izValute": "AFN",
+    "uValutu": "AFN",
+    "kurs": 1.0
+  },
+  {
+    "datumVreme": "2018-05-18 19:45:32.4532",
+    "izValute": "AFN",
+    "uValutu": "BDT",
+    "kurs": 1.173878
   }
 ]
