@@ -10,5 +10,11 @@
     "izValute": "BRL",
     "uValutu": "AFN",
     "kurs": 19.666673
+  },
+  {
+    "datumVreme": "2018-05-18 08:09:06.96",
+    "izValute": "AFN",
+    "uValutu": "AFN",
+    "kurs": 1.0
   }
 ]

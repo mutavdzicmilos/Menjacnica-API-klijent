@@ -19,7 +19,7 @@ public class SaveVeza {
 		konverzija.setKurs(rate);
 
 		Date date = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.ms");
 		konverzija.setDatumVreme(format.format(date));
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
